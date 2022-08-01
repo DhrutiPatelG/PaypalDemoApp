@@ -11,6 +11,6 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.integer :payment_gateway
       t.timestamps
     end
-    add_money :orders, :price, currency: { present: false }
+    add_monetize :orders, :price, currency: { present: false }
   end
 end

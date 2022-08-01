@@ -5,6 +5,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :stripe_plan_name
       t.string :paypal_plan_name
     end
-    add_money :products, :price, currency: { present: true }
+    add_monetize :products, :price, currency: { present: true }
   end
 end
